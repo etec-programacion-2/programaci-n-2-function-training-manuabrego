@@ -13,7 +13,7 @@ fun main() {
     val nota = 7.0
     val aprobado = esAprobado(nota)
     println("¿Está aprobado? $aprobado")
-
+/*
     println("\n=== Etapa 2: Funciones con Múltiples Parámetros ===")
     // TODO: Implementar función calcularPromedioTresNotas
     val promedioTresNotas = calcularPromedioTresNotas(7.0, 8.0, 9.0)
@@ -47,7 +47,7 @@ fun main() {
     println("Promedio: ${calcularPromedioCurso(notas)}")
     println("Nota más alta: ${obtenerNotaMasAlta(notas)}")
     println("Nota más baja: ${obtenerNotaMasBaja(notas)}")
-    println("Cantidad de aprobados: ${contarAprobados(notas)}")
+    println("Cantidad de aprobados: ${contarAprobados(notas)}")*/
 }
 
 // TODO: Implementar las siguientes funciones:
@@ -55,13 +55,24 @@ fun main() {
 // Etapa 1
 fun calcularPromedio(nota1: Double, nota2: Double): Double {
     // Implementar aquí
-    return 0.0
+    return (nota1 + nota2) / 2
 }
 
 fun esAprobado(nota: Double): Boolean {
     // Implementar aquí
-    return false
+    return nota >= 6.0
 }
+
+
+
+
+
+
+
+
+
+
+/*
 
 // Etapa 2
 fun calcularPromedioTresNotas(nota1: Double, nota2: Double, nota3: Double): Double {
@@ -105,3 +116,4 @@ fun contarAprobados(notas: List<Double>): Int {
     // Implementar aquí
     return 0
 }
+*/
