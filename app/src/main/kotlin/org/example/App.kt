@@ -4,7 +4,7 @@
 package org.example
 
 fun main() {
-    /*
+
     println("=== Etapa 1: Funciones Básicas ===")
     // TODO: Implementar función calcularPromedio
     val promedio1 = calcularPromedio(7.5, 8.0)
@@ -23,7 +23,7 @@ fun main() {
     // TODO: Implementar función obtenerEstadoAlumno
     val estado = obtenerEstadoAlumno("Juan", "Pérez", 7.5)
     println(estado)
-*/
+
 
 
 
@@ -45,7 +45,7 @@ fun main() {
 
 
 
-/*
+
     println("\n=== Etapa 4: Funciones Avanzadas ===")
     // TODO: Implementar función generarBoletin
     val materias = listOf("Matemática", "Lengua", "Historia")
@@ -53,14 +53,26 @@ fun main() {
     val boletin = generarBoletin("Juan Pérez", materias, notasMaterias)
     println(boletin)
 
+
+
+
+
     // TODO: Implementar funciones de análisis de rendimiento
     println("Estadísticas del curso:")
     println("Promedio: ${calcularPromedioCurso(notas)}")
     println("Nota más alta: ${obtenerNotaMasAlta(notas)}")
     println("Nota más baja: ${obtenerNotaMasBaja(notas)}")
-    println("Cantidad de aprobados: ${contarAprobados(notas)}")*/
+    println("Cantidad de aprobados: ${contarAprobados(notas)}")
+
+
+
+
+
+
+
+
 }
-/* 
+
 // TODO: Implementar las siguientes funciones:
 
 // Etapa 1
@@ -70,34 +82,26 @@ fun calcularPromedio(nota1: Double, nota2: Double): Double {
 }
 
 fun esAprobado(nota: Double): Boolean {
-    // Implementar aquí
+
     return nota >= 6.0
 }
  
 
 // Etapa 2
 fun calcularPromedioTresNotas(nota1: Double, nota2: Double, nota3: Double): Double {
-    // Implementar aquí
+
     return (nota1 + nota2 + nota3) / 3
 }
 
 fun obtenerEstadoAlumno(nombre: String, apellido: String, nota: Double): String{
-    // Implementar aquí
+
     val estado = if (nota >= 6.0) "está aprobado" else "está desaprobado"
     return "El alumno $nombre $apellido $estado" 
 }
 
-
-
-*/
-
-
-
-
-
 // Etapa 3
 fun calcularPromedioCurso(notas: List<Double>): Double {
-    // Implementar aquí
+
     val cantNotas = notas.size
     val sumNotas = notas.sum()
     return sumNotas/cantNotas
@@ -123,27 +127,64 @@ fun obtenerAlumnosAprobados(nombres: List<String>, notas: List<Double>): List<St
 
 
 
-/* 
 
 
-// Etapa 4
+// Etapa 4 CON CLAUDE
 fun generarBoletin(nombre: String, materias: List<String>, notas: List<Double>): String {
     // Implementar aquí
-    return ""
+    var resultado = "Boletín de Calificaciones\n"
+    resultado += "Estudiante: $nombre\n"
+    resultado += "--------------------------------\n"
+    
+    // Validar que las listas tengan el mismo tamaño
+    if (materias.size != notas.size) {
+        return "Error: La cantidad de materias no coincide con la cantidad de notas"
+    }
+    
+    // Calcular el promedio de todas las notas
+    var sumaNotas = 0.0
+    
+    // Recorrer las listas de materias y notas juntas
+    for (i in materias.indices) {
+        val materia = materias[i]
+        val nota = notas[i]
+        
+        // Agregar cada materia con su nota al boletín
+        resultado += "${materia}: $nota\n"
+        
+        // Sumar la nota al total
+        sumaNotas += nota
+    }
 }
 
 fun obtenerNotaMasAlta(notas: List<Double>): Double {
-    // Implementar aquí
-    return 0.0
-}
+
+    var maxNota = notas[0]
+    for (nota in notas) {
+        if (nota > maxNota) {
+            maxNota = nota
+        }
+    }
+    return maxNota}
+
 
 fun obtenerNotaMasBaja(notas: List<Double>): Double {
-    // Implementar aquí
-    return 0.0
+
+    var minNota = notas[0]
+    for (nota in notas) {
+        if (nota < minNota) {
+            minNota = nota
+        }
+    }
+    return minNota
 }
 
 fun contarAprobados(notas: List<Double>): Int {
-    // Implementar aquí
-    return 0
+    var contador = 0
+    for (nota in notas) {
+        if (nota >= 6.0) {
+            contador++
+        }
+    }
+    return contador
 }
-*/
