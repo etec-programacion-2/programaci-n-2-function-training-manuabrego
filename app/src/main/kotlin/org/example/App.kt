@@ -129,19 +129,13 @@ fun obtenerAlumnosAprobados(nombres: List<String>, notas: List<Double>): List<St
 
 
 
-// Etapa 4 CON CLAUDE
+// Etapa 4 CON CLAUDE ayudó 
 fun generarBoletin(nombre: String, materias: List<String>, notas: List<Double>): String {
     // Implementar aquí
-    var resultado = "Boletín de Calificaciones\n"
+    var resultado = "Boletín de Calificaciones\n" // el barra n me hace un salto de linea 
     resultado += "Estudiante: $nombre\n"
     resultado += "--------------------------------\n"
-    
-    // Validar que las listas tengan el mismo tamaño
-    if (materias.size != notas.size) {
-        return "Error: La cantidad de materias no coincide con la cantidad de notas"
-    }
-    
-    // Calcular el promedio de todas las notas
+
     var sumaNotas = 0.0
     
     // Recorrer las listas de materias y notas juntas
